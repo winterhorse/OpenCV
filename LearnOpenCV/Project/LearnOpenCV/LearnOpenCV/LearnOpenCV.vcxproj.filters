@@ -13,10 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\opencv-01">
+      <UniqueIdentifier>{ea751d3f-a56f-49cc-890f-22097960e722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\opencv-01">
+      <UniqueIdentifier>{67b72345-e979-4a13-92ef-3580323a86df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="opencv-01\ocv01-01.cpp">
+      <Filter>源文件\opencv-01</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="doc\opencv-01\ocv01-01.txt">
+      <Filter>资源文件\opencv-01</Filter>
+    </Text>
   </ItemGroup>
 </Project>

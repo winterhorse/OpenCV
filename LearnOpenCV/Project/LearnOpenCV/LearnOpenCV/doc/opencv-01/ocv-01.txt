@@ -1,0 +1,24 @@
+
+OpenCV介绍与环境搭建
+
+OpenCV简介
+	计算机视觉开源库
+	
+OpenCV核心模块
+	highgui
+	image process
+	2D feature 
+	object detection
+	camera calibration and 3D reconstruction
+	video analysis	
+	machine learning
+	GPU 加速
+	
+主要应用：
+	工业
+	医学
+	无人机
+	无人驾驶
+	安防领域
+	场景处理
+	

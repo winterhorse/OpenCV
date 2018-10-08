@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C36CD81B-162D-4CF5-8B88-E49071F49297}</ProjectGuid>
+    <ProjectGuid>{C62A49CD-D23B-4E99-A0AE-CF0C72660E4D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LearnOpenCV</RootNamespace>
   </PropertyGroup>
@@ -68,27 +68,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\..\..\inc\;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)\..\..\bin\</OutDir>
-    <LibraryPath>$(SolutionDir)\..\..\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)..\..\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\lib\;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>$(SolutionDir)\..\..\lib\;$(LibraryPath)</LibraryPath>
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\..\..\inc\;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)\..\..\bin\</OutDir>
+    <IncludePath>$(SolutionDir)..\..\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\lib\;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\..\..\inc\;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)\..\..\bin\</OutDir>
-    <LibraryPath>$(SolutionDir)\..\..\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)..\..\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\lib\;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LibraryPath>$(SolutionDir)\..\..\lib\;$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)\..\..\inc\;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)\..\..\bin\</OutDir>
+    <IncludePath>$(SolutionDir)..\..\inc\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\..\lib\;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -101,8 +97,11 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_world310.lib;opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_aruco320d.lib;opencv_bgsegm320d.lib;opencv_bioinspired320d.lib;opencv_calib3d320d.lib;opencv_ccalib320d.lib;opencv_core320d.lib;opencv_datasets320d.lib;opencv_dnn320d.lib;opencv_dpm320d.lib;opencv_face320d.lib;opencv_features2d320d.lib;opencv_flann320d.lib;opencv_fuzzy320d.lib;opencv_highgui320d.lib;opencv_imgcodecs320d.lib;opencv_imgproc320d.lib;opencv_line_descriptor320d.lib;opencv_ml320d.lib;opencv_objdetect320d.lib;opencv_optflow320d.lib;opencv_phase_unwrapping320d.lib;opencv_photo320d.lib;opencv_plot320d.lib;opencv_reg320d.lib;opencv_rgbd320d.lib;opencv_saliency320d.lib;opencv_shape320d.lib;opencv_stereo320d.lib;opencv_stitching320d.lib;opencv_structured_light320d.lib;opencv_superres320d.lib;opencv_surface_matching320d.lib;opencv_text320d.lib;opencv_tracking320d.lib;opencv_video320d.lib;opencv_videoio320d.lib;opencv_videostab320d.lib;opencv_xfeatures2d320d.lib;opencv_ximgproc320d.lib;opencv_xobjdetect320d.lib;opencv_xphoto320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)..\..\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,8 +114,11 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opencv_world310.lib;opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_aruco320d.lib;opencv_bgsegm320d.lib;opencv_bioinspired320d.lib;opencv_calib3d320d.lib;opencv_ccalib320d.lib;opencv_core320d.lib;opencv_datasets320d.lib;opencv_dnn320d.lib;opencv_dpm320d.lib;opencv_face320d.lib;opencv_features2d320d.lib;opencv_flann320d.lib;opencv_fuzzy320d.lib;opencv_highgui320d.lib;opencv_imgcodecs320d.lib;opencv_imgproc320d.lib;opencv_line_descriptor320d.lib;opencv_ml320d.lib;opencv_objdetect320d.lib;opencv_optflow320d.lib;opencv_phase_unwrapping320d.lib;opencv_photo320d.lib;opencv_plot320d.lib;opencv_reg320d.lib;opencv_rgbd320d.lib;opencv_saliency320d.lib;opencv_shape320d.lib;opencv_stereo320d.lib;opencv_stitching320d.lib;opencv_structured_light320d.lib;opencv_superres320d.lib;opencv_surface_matching320d.lib;opencv_text320d.lib;opencv_tracking320d.lib;opencv_video320d.lib;opencv_videoio320d.lib;opencv_videostab320d.lib;opencv_xfeatures2d320d.lib;opencv_ximgproc320d.lib;opencv_xobjdetect320d.lib;opencv_xphoto320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)..\..\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -133,8 +135,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_world310.lib;opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_aruco320d.lib;opencv_bgsegm320d.lib;opencv_bioinspired320d.lib;opencv_calib3d320d.lib;opencv_ccalib320d.lib;opencv_core320d.lib;opencv_datasets320d.lib;opencv_dnn320d.lib;opencv_dpm320d.lib;opencv_face320d.lib;opencv_features2d320d.lib;opencv_flann320d.lib;opencv_fuzzy320d.lib;opencv_highgui320d.lib;opencv_imgcodecs320d.lib;opencv_imgproc320d.lib;opencv_line_descriptor320d.lib;opencv_ml320d.lib;opencv_objdetect320d.lib;opencv_optflow320d.lib;opencv_phase_unwrapping320d.lib;opencv_photo320d.lib;opencv_plot320d.lib;opencv_reg320d.lib;opencv_rgbd320d.lib;opencv_saliency320d.lib;opencv_shape320d.lib;opencv_stereo320d.lib;opencv_stitching320d.lib;opencv_structured_light320d.lib;opencv_superres320d.lib;opencv_surface_matching320d.lib;opencv_text320d.lib;opencv_tracking320d.lib;opencv_video320d.lib;opencv_videoio320d.lib;opencv_videostab320d.lib;opencv_xfeatures2d320d.lib;opencv_ximgproc320d.lib;opencv_xobjdetect320d.lib;opencv_xphoto320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)..\..\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -151,11 +156,19 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>opencv_world310.lib;opencv_world310d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opencv_aruco320d.lib;opencv_bgsegm320d.lib;opencv_bioinspired320d.lib;opencv_calib3d320d.lib;opencv_ccalib320d.lib;opencv_core320d.lib;opencv_datasets320d.lib;opencv_dnn320d.lib;opencv_dpm320d.lib;opencv_face320d.lib;opencv_features2d320d.lib;opencv_flann320d.lib;opencv_fuzzy320d.lib;opencv_highgui320d.lib;opencv_imgcodecs320d.lib;opencv_imgproc320d.lib;opencv_line_descriptor320d.lib;opencv_ml320d.lib;opencv_objdetect320d.lib;opencv_optflow320d.lib;opencv_phase_unwrapping320d.lib;opencv_photo320d.lib;opencv_plot320d.lib;opencv_reg320d.lib;opencv_rgbd320d.lib;opencv_saliency320d.lib;opencv_shape320d.lib;opencv_stereo320d.lib;opencv_stitching320d.lib;opencv_structured_light320d.lib;opencv_superres320d.lib;opencv_surface_matching320d.lib;opencv_text320d.lib;opencv_tracking320d.lib;opencv_video320d.lib;opencv_videoio320d.lib;opencv_videostab320d.lib;opencv_xfeatures2d320d.lib;opencv_ximgproc320d.lib;opencv_xobjdetect320d.lib;opencv_xphoto320d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy "$(SolutionDir)..\..\bin\*.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="opencv-01\ocv01-01.cpp" />
+    <ClCompile Include="template.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="doc\opencv-01\ocv01-01.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
