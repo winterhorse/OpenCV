@@ -30,6 +30,9 @@
     <ClCompile Include="opencv-01\ocv01-01.cpp">
       <Filter>源文件\opencv-01</Filter>
     </ClCompile>
+    <ClCompile Include="test_XML2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="doc\opencv-01\ocv01-01.txt">
